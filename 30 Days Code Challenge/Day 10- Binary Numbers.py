@@ -1,11 +1,9 @@
 import re
 from collections import Counter
 
-n = 6
+n = 111
 
-binNumber = str(bin(n))[2:]
-print(binNumber)
-finder = re.findall('11+', binNumber)
+binNumber = str(bin(n)[2:])
+finder = binNumber.split('0')
 
-
-print(str(finder).split( ))
+print(len(max(finder)))
