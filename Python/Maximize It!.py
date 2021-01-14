@@ -1,5 +1,10 @@
-n, _ = map(int, '3 1000'.split())
-K = map(int, '2 5 4'.split())
+from itertools import product
+
+n, k = map(int, input().split())
+counter = []
 
 for i in range(n):
-    print(K)
+    count = list(map(int, input().split()[1:]))
+    counter.append([x ** 2 for x in count])
+
+print(max(list(sum(x) % k for x in product(*counter))))
